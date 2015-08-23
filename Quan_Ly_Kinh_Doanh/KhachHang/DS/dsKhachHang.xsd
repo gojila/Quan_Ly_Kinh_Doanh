@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsKhachHang" targetNamespace="http://tempuri.org/dsKhachHang.xsd" xmlns:mstns="http://tempuri.org/dsKhachHang.xsd" xmlns="http://tempuri.org/dsKhachHang.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="Do_An_QLK_ConnectionString2" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Do_An_QLK_ConnectionString2 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Do_An_Quan_Ly_Kho.Properties.Settings.GlobalReference.Default.Do_An_QLK_ConnectionString2" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="KHACH_HANGTableAdapter" GeneratorDataComponentClassName="KHACH_HANGTableAdapter" Name="KHACH_HANG" UserDataComponentName="KHACH_HANGTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Do_An_QLK_ConnectionString2 (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>
+SELECT kh.Ma_Khach_Hang,
+       kh.Ten_Khach_Hang,
+       kh.Ma_Khu_Vuc,
+       kv.Ten_Khu_Vuc,
+       kh.Dia_Chi,
+       kh.Ma_So_Thue,
+       kh.Dien_Thoai,
+       kh.Fax,
+       kh.Email,
+       kh.Di_Dong,
+       kh.Website,
+       kh.Nguoi_Lien_He,
+       kh.NickYM,
+       kh.NickSky,
+       kh.Tai_Khoan_Ngan_Hang,
+       kh.Ten_Ngan_Hang,
+       kh.Ghi_Chu
+FROM   KHACH_HANG kh
+       LEFT OUTER JOIN KHU_VUC kv
+            ON  kv.Ma_Khu_Vuc = kh.Ma_Khu_Vuc</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Ma_Khach_Hang" DataSetColumn="Ma_Khach_Hang" />
+              <Mapping SourceColumn="Ten_Khach_Hang" DataSetColumn="Ten_Khach_Hang" />
+              <Mapping SourceColumn="Ma_Khu_Vuc" DataSetColumn="Ma_Khu_Vuc" />
+              <Mapping SourceColumn="Dia_Chi" DataSetColumn="Dia_Chi" />
+              <Mapping SourceColumn="Ma_So_Thue" DataSetColumn="Ma_So_Thue" />
+              <Mapping SourceColumn="Dien_Thoai" DataSetColumn="Dien_Thoai" />
+              <Mapping SourceColumn="Fax" DataSetColumn="Fax" />
+              <Mapping SourceColumn="Email" DataSetColumn="Email" />
+              <Mapping SourceColumn="Di_Dong" DataSetColumn="Di_Dong" />
+              <Mapping SourceColumn="Website" DataSetColumn="Website" />
+              <Mapping SourceColumn="Nguoi_Lien_He" DataSetColumn="Nguoi_Lien_He" />
+              <Mapping SourceColumn="NickYM" DataSetColumn="NickYM" />
+              <Mapping SourceColumn="NickSky" DataSetColumn="NickSky" />
+              <Mapping SourceColumn="Tai_Khoan_Ngan_Hang" DataSetColumn="Tai_Khoan_Ngan_Hang" />
+              <Mapping SourceColumn="Ten_Ngan_Hang" DataSetColumn="Ten_Ngan_Hang" />
+              <Mapping SourceColumn="Ghi_Chu" DataSetColumn="Ghi_Chu" />
+              <Mapping SourceColumn="Ten_Khu_Vuc" DataSetColumn="Ten_Khu_Vuc" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="KHU_VUCTableAdapter" GeneratorDataComponentClassName="KHU_VUCTableAdapter" Name="KHU_VUC" UserDataComponentName="KHU_VUCTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Do_An_QLK_ConnectionString2 (Settings)" DbObjectName="QLK_quang_make.dbo.KHU_VUC" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[KHU_VUC] WHERE (([Ma_Khu_Vuc] = @Original_Ma_Khu_Vuc) AND ([Ten_Khu_Vuc] = @Original_Ten_Khu_Vuc) AND ((@IsNull_Ghi_Chu = 1 AND [Ghi_Chu] IS NULL) OR ([Ghi_Chu] = @Original_Ghi_Chu)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Ma_Khu_Vuc" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Ma_Khu_Vuc" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Ten_Khu_Vuc" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Ten_Khu_Vuc" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Ghi_Chu" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Ghi_Chu" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Ghi_Chu" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Ghi_Chu" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[KHU_VUC] ([Ma_Khu_Vuc], [Ten_Khu_Vuc], [Ghi_Chu]) VALUES (@Ma_Khu_Vuc, @Ten_Khu_Vuc, @Ghi_Chu);
+SELECT Ma_Khu_Vuc, Ten_Khu_Vuc, Ghi_Chu FROM KHU_VUC WHERE (Ma_Khu_Vuc = @Ma_Khu_Vuc)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Ma_Khu_Vuc" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Ma_Khu_Vuc" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Ten_Khu_Vuc" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Ten_Khu_Vuc" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Ghi_Chu" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Ghi_Chu" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Ma_Khu_Vuc, Ten_Khu_Vuc, Ghi_Chu FROM dbo.KHU_VUC</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[KHU_VUC] SET [Ma_Khu_Vuc] = @Ma_Khu_Vuc, [Ten_Khu_Vuc] = @Ten_Khu_Vuc, [Ghi_Chu] = @Ghi_Chu WHERE (([Ma_Khu_Vuc] = @Original_Ma_Khu_Vuc) AND ([Ten_Khu_Vuc] = @Original_Ten_Khu_Vuc) AND ((@IsNull_Ghi_Chu = 1 AND [Ghi_Chu] IS NULL) OR ([Ghi_Chu] = @Original_Ghi_Chu)));
+SELECT Ma_Khu_Vuc, Ten_Khu_Vuc, Ghi_Chu FROM KHU_VUC WHERE (Ma_Khu_Vuc = @Ma_Khu_Vuc)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Ma_Khu_Vuc" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Ma_Khu_Vuc" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Ten_Khu_Vuc" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Ten_Khu_Vuc" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Ghi_Chu" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Ghi_Chu" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Ma_Khu_Vuc" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Ma_Khu_Vuc" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Ten_Khu_Vuc" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Ten_Khu_Vuc" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Ghi_Chu" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Ghi_Chu" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Ghi_Chu" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Ghi_Chu" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Ma_Khu_Vuc" DataSetColumn="Ma_Khu_Vuc" />
+              <Mapping SourceColumn="Ten_Khu_Vuc" DataSetColumn="Ten_Khu_Vuc" />
+              <Mapping SourceColumn="Ghi_Chu" DataSetColumn="Ghi_Chu" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsKhachHang" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dsKhachHang" msprop:Generator_DataSetName="dsKhachHang" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="KHACH_HANG" msprop:Generator_UserTableName="KHACH_HANG" msprop:Generator_RowDeletedName="KHACH_HANGRowDeleted" msprop:Generator_RowChangedName="KHACH_HANGRowChanged" msprop:Generator_RowClassName="KHACH_HANGRow" msprop:Generator_RowChangingName="KHACH_HANGRowChanging" msprop:Generator_RowEvArgName="KHACH_HANGRowChangeEvent" msprop:Generator_RowEvHandlerName="KHACH_HANGRowChangeEventHandler" msprop:Generator_TableClassName="KHACH_HANGDataTable" msprop:Generator_TableVarName="tableKHACH_HANG" msprop:Generator_RowDeletingName="KHACH_HANGRowDeleting" msprop:Generator_TablePropName="KHACH_HANG">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Ma_Khach_Hang" msprop:Generator_UserColumnName="Ma_Khach_Hang" msprop:Generator_ColumnPropNameInRow="Ma_Khach_Hang" msprop:Generator_ColumnVarNameInTable="columnMa_Khach_Hang" msprop:Generator_ColumnPropNameInTable="Ma_Khach_HangColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Ten_Khach_Hang" msprop:Generator_UserColumnName="Ten_Khach_Hang" msprop:Generator_ColumnPropNameInRow="Ten_Khach_Hang" msprop:Generator_ColumnVarNameInTable="columnTen_Khach_Hang" msprop:Generator_ColumnPropNameInTable="Ten_Khach_HangColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Ma_Khu_Vuc" msprop:Generator_UserColumnName="Ma_Khu_Vuc" msprop:Generator_ColumnPropNameInRow="Ma_Khu_Vuc" msprop:Generator_ColumnVarNameInTable="columnMa_Khu_Vuc" msprop:Generator_ColumnPropNameInTable="Ma_Khu_VucColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Dia_Chi" msprop:Generator_UserColumnName="Dia_Chi" msprop:Generator_ColumnPropNameInRow="Dia_Chi" msprop:Generator_ColumnVarNameInTable="columnDia_Chi" msprop:Generator_ColumnPropNameInTable="Dia_ChiColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Ma_So_Thue" msprop:Generator_UserColumnName="Ma_So_Thue" msprop:Generator_ColumnPropNameInRow="Ma_So_Thue" msprop:Generator_ColumnVarNameInTable="columnMa_So_Thue" msprop:Generator_ColumnPropNameInTable="Ma_So_ThueColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Dien_Thoai" msprop:Generator_UserColumnName="Dien_Thoai" msprop:Generator_ColumnPropNameInRow="Dien_Thoai" msprop:Generator_ColumnVarNameInTable="columnDien_Thoai" msprop:Generator_ColumnPropNameInTable="Dien_ThoaiColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Fax" msprop:Generator_UserColumnName="Fax" msprop:Generator_ColumnPropNameInRow="Fax" msprop:Generator_ColumnVarNameInTable="columnFax" msprop:Generator_ColumnPropNameInTable="FaxColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Email" msprop:Generator_UserColumnName="Email" msprop:Generator_ColumnPropNameInRow="Email" msprop:Generator_ColumnVarNameInTable="columnEmail" msprop:Generator_ColumnPropNameInTable="EmailColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Di_Dong" msprop:Generator_UserColumnName="Di_Dong" msprop:Generator_ColumnPropNameInRow="Di_Dong" msprop:Generator_ColumnVarNameInTable="columnDi_Dong" msprop:Generator_ColumnPropNameInTable="Di_DongColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Website" msprop:Generator_UserColumnName="Website" msprop:Generator_ColumnPropNameInRow="Website" msprop:Generator_ColumnVarNameInTable="columnWebsite" msprop:Generator_ColumnPropNameInTable="WebsiteColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Nguoi_Lien_He" msprop:Generator_UserColumnName="Nguoi_Lien_He" msprop:Generator_ColumnPropNameInRow="Nguoi_Lien_He" msprop:Generator_ColumnVarNameInTable="columnNguoi_Lien_He" msprop:Generator_ColumnPropNameInTable="Nguoi_Lien_HeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NickYM" msprop:Generator_UserColumnName="NickYM" msprop:Generator_ColumnPropNameInRow="NickYM" msprop:Generator_ColumnVarNameInTable="columnNickYM" msprop:Generator_ColumnPropNameInTable="NickYMColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NickSky" msprop:Generator_UserColumnName="NickSky" msprop:Generator_ColumnPropNameInRow="NickSky" msprop:Generator_ColumnVarNameInTable="columnNickSky" msprop:Generator_ColumnPropNameInTable="NickSkyColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Tai_Khoan_Ngan_Hang" msprop:Generator_UserColumnName="Tai_Khoan_Ngan_Hang" msprop:Generator_ColumnPropNameInRow="Tai_Khoan_Ngan_Hang" msprop:Generator_ColumnVarNameInTable="columnTai_Khoan_Ngan_Hang" msprop:Generator_ColumnPropNameInTable="Tai_Khoan_Ngan_HangColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Ten_Ngan_Hang" msprop:Generator_UserColumnName="Ten_Ngan_Hang" msprop:Generator_ColumnPropNameInRow="Ten_Ngan_Hang" msprop:Generator_ColumnVarNameInTable="columnTen_Ngan_Hang" msprop:Generator_ColumnPropNameInTable="Ten_Ngan_HangColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Ghi_Chu" msprop:Generator_UserColumnName="Ghi_Chu" msprop:Generator_ColumnPropNameInRow="Ghi_Chu" msprop:Generator_ColumnVarNameInTable="columnGhi_Chu" msprop:Generator_ColumnPropNameInTable="Ghi_ChuColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Ten_Khu_Vuc" msprop:Generator_UserColumnName="Ten_Khu_Vuc" msprop:Generator_ColumnPropNameInRow="Ten_Khu_Vuc" msprop:Generator_ColumnVarNameInTable="columnTen_Khu_Vuc" msprop:Generator_ColumnPropNameInTable="Ten_Khu_VucColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="KHU_VUC" msprop:Generator_UserTableName="KHU_VUC" msprop:Generator_RowDeletedName="KHU_VUCRowDeleted" msprop:Generator_RowChangedName="KHU_VUCRowChanged" msprop:Generator_RowClassName="KHU_VUCRow" msprop:Generator_RowChangingName="KHU_VUCRowChanging" msprop:Generator_RowEvArgName="KHU_VUCRowChangeEvent" msprop:Generator_RowEvHandlerName="KHU_VUCRowChangeEventHandler" msprop:Generator_TableClassName="KHU_VUCDataTable" msprop:Generator_TableVarName="tableKHU_VUC" msprop:Generator_RowDeletingName="KHU_VUCRowDeleting" msprop:Generator_TablePropName="KHU_VUC">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Ma_Khu_Vuc" msprop:Generator_UserColumnName="Ma_Khu_Vuc" msprop:Generator_ColumnPropNameInRow="Ma_Khu_Vuc" msprop:Generator_ColumnVarNameInTable="columnMa_Khu_Vuc" msprop:Generator_ColumnPropNameInTable="Ma_Khu_VucColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Ten_Khu_Vuc" msprop:Generator_UserColumnName="Ten_Khu_Vuc" msprop:Generator_ColumnPropNameInRow="Ten_Khu_Vuc" msprop:Generator_ColumnVarNameInTable="columnTen_Khu_Vuc" msprop:Generator_ColumnPropNameInTable="Ten_Khu_VucColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Ghi_Chu" msprop:Generator_UserColumnName="Ghi_Chu" msprop:Generator_ColumnPropNameInRow="Ghi_Chu" msprop:Generator_ColumnVarNameInTable="columnGhi_Chu" msprop:Generator_ColumnPropNameInTable="Ghi_ChuColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

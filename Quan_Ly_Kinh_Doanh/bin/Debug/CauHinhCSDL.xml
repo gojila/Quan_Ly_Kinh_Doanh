@@ -1,0 +1,10 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <CauHinhCSDL>
+    <MayChu>.\SQLEXPRESS</MayChu>
+    <SuDungTaiKhoanWindows>0</SuDungTaiKhoanWindows>
+    <TaiKhoanSQL>sa</TaiKhoanSQL>
+    <Password>123456</Password>
+    <CSDL>Do_An_Quan_Ly_Kho</CSDL>
+  </CauHinhCSDL>
+</NewDataSet>
