@@ -115,3 +115,6 @@ E:\LamPhanMem\quanlykho_quang_make\Do_An_Quan_Ly_Kho\obj\Debug\Do_An_Quan_Ly_Kho
 E:\LamPhanMem\quanlykho_quang_make\Do_An_Quan_Ly_Kho\obj\Debug\Do_An_Quan_Ly_Kho.DoanhThu.ucTheoNhanVien.resources
 E:\LamPhanMem\quanlykho_quang_make\Do_An_Quan_Ly_Kho\obj\Debug\Do_An_Quan_Ly_Kho.DoanhThu.ucTheoTongHop.resources
 E:\LamPhanMem\quanlykho_quang_make\Do_An_Quan_Ly_Kho\obj\Debug\Do_An_Quan_Ly_Kho.CongNoChungTu.frmCongNoChungTu.resources
+C:\Users\Quang\Documents\GitHub\Quan_Ly_Kinh_Doanh\Quan_Ly_Kinh_Doanh\Quan_Ly_Kinh_Doanh\bin\Debug\Do_An_Quan_Ly_Kho.exe.config
+C:\Users\Quang\Documents\GitHub\Quan_Ly_Kinh_Doanh\Quan_Ly_Kinh_Doanh\Quan_Ly_Kinh_Doanh\obj\Debug\Do_An_Quan_Ly_Kho.exe
+C:\Users\Quang\Documents\GitHub\Quan_Ly_Kinh_Doanh\Quan_Ly_Kinh_Doanh\Quan_Ly_Kinh_Doanh\obj\Debug\Do_An_Quan_Ly_Kho.pdb
